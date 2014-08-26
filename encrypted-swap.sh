@@ -13,11 +13,13 @@
 # --------------------------------
 
 # ### System specific parameters
+
 PARTITION_RAW="/dev/sda10"
 PARTITION_UNLOCKED="/dev/mapper/luks-5edddf9e-76b9-4030-9fd3-90502211ace3"
 
-# ### The code.
+# ### The code
 # First, make sure the swap partition isn't already unlocked.
+
 if [[ -z `ls $PARTITION_UNLOCKED` ]];
 then
   echo "Unlocking encrypted swap partition..."  
@@ -25,13 +27,15 @@ then
 fi
 
 # Make sure it's not already enabled as a swap device.
+
 if [[ -z `swapon -s | grep $PARTITION_UNLOCKED` ]]
 then
   echo "Enabling swap..."
-  sudo swapon /dev/mapper/luks-5edddf9e-76b9-4030-9fd3-90502211ace3
+  sudo swapon $PARTITION_UNLOCKED
 fi
 
 # To ensure this works for GUI sessions run this script as a 
 # "Start-up Application" using the GUI tool for such, or by manually adding a 
 # .desktop file to ~/.config/autostart to run this script, e.g., 
-# > gnome-terminal -e "/etc/profile.d/encrypted-swap.sh"
+#
+#     gnome-terminal -e "/etc/profile.d/encrypted-swap.sh"
