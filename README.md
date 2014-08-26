@@ -1,1 +1,1 @@
-This will point to the gh-pages soon enough.
+[You might prefer to be here.](http://matt2000.github.io/practical-solutions/)
