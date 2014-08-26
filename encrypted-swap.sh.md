@@ -14,8 +14,9 @@ LUKS+ext4 and then put together this script to enable it on log-in.
     PARTITION_RAW="/dev/sda10"
     PARTITION_UNLOCKED="/dev/mapper/luks-5edddf9e-76b9-4030-9fd3-90502211ace3"
     
-### The code.
+### The code
 First, make sure the swap partition isn't already unlocked.
+
     if [[ -z `ls $PARTITION_UNLOCKED` ]];
     then
       echo "Unlocking encrypted swap partition..."  
@@ -23,6 +24,7 @@ First, make sure the swap partition isn't already unlocked.
     fi
     
 Make sure it's not already enabled as a swap device.
+
     if [[ -z `swapon -s | grep $PARTITION_UNLOCKED` ]]
     then
       echo "Enabling swap..."
