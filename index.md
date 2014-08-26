@@ -10,6 +10,6 @@ Practical = ( partial | ugly | temporary | works-for-me | works-for-now )
 ## [{{ post.title }}]({{ site.url }}{{ post.url }})
 {{ post.date | date_to_string }}
 
-{{ post.excerpt | split:"----" | first | split:"<p>" | last | strip_html}}
+{{ post.excerpt | split:"</p>" | first | strip_html}}
 
 {% endfor %} 
