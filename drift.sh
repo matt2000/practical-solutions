@@ -68,7 +68,7 @@ TMPREMOTE="/tmp/drift-remote/"
 echo "'drift -h' for usage info."
 
 # It's always good to remind the user of what they're doing when they might be 
-# doing something momumentally stupid. Especially if the user is me.
+# doing something monumentally stupid. Especially if the user is me.
 
 echo "The following database will be overwritten:"
 drush sql-conf
