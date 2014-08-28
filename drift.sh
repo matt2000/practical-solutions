@@ -141,7 +141,7 @@ else
   drush cc all
 fi
 
-# Many times, one wants to do thinks after loading the database, like revert
+# Many times, one wants to do things after loading the database, like revert
 # features or create test accounts or get a reminder to call the wife. This
 # provides a convenient place for such things.
 
