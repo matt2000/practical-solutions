@@ -30,6 +30,22 @@
   </ul>
  </div>
 </div>
+
+<hr/>
+<h4>Comments</h4>
+<p>Let's experiment with Facebook Comments. I may remove this any time, so behave
+yourselves, or I will turn around the car and we'll never go to Disneyland ever
+again and I mean it!</p>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=372836461648&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<div class="fb-comments" data-href="{{ site.url }}{{ post.url }}" data-numposts="25" data-colorscheme="light"></div>
+
 {% include footer.html %}
 </div>
 </body>
