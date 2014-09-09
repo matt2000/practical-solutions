@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Drupal: Dev environment Post DB Update script
+# Drupal Dev environment Post DB Update script
 # =============================================
 # Drupal Drush
 #
