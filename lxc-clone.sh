@@ -239,14 +239,14 @@ do_external_networking() {
   #Set-up network interface on host
   cat <<EOF >> /etc/network/interfaces
 
-# $VEname
+## $VEname
 auto eth0:$ipset$interface
 iface eth0:$ipset$interface inet static
   address $external_ip
   netmask $netmask
   broadcast $broadcast
   gateway $gateway
-# end $VEname
+## end $VEname
 EOF
 
 
