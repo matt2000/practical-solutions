@@ -112,9 +112,8 @@ fi
 
 echo "Settings up Ninjitsu Virtual Environment for $VEname"
 
-
-
 # Check if an External IP is needed.
+
 if [[ -z $address ]]; then
 
   # I used a SQLite Database for tracking IP address assignments.  Here we
@@ -175,7 +174,7 @@ EOF
 cat <<EOF > $rootfs/etc/hosts
 127.0.0.1   $VEname localhost
 
-# The following lines are desirable for IPv6 capable hosts
+#The following lines are desirable for IPv6 capable hosts
 ::1     localhost ip6-localhost ip6-loopback
 fe00::0 ip6-localnet
 ff00::0 ip6-mcastprefix
