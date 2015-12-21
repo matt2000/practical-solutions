@@ -24,9 +24,9 @@
 
 source lxc-clone.conf
 
-# No set up some defaults, which might be replaced by CLI arguments.
+# Now set up some defaults, which might be replaced by CLI arguments.
 
-# Snapshot is <sub-directory of a copy-on-write filesystem, and is the "base"
+# Snapshot is a sub-directory of a copy-on-write filesystem, and is the "base"
 # container that is cloned (by default) to create new containers.
 
 snapshot="webnode-default"
@@ -88,7 +88,7 @@ else
         -l|--local) #used for no external IP
             local="1"
             ;;
-        -q|--quota) #ZFS storage quota
+        -q|--quota) #storage quota
             quota="$2"
             shift
             ;;
@@ -147,7 +147,7 @@ rootfs="$VEpath/$VEname/rootfs"
 
 cp $VEpath/$snapshot $VEpath/$VEname
 
-# Secret sauce.
+# Give the new VE a disk space quota.
 
 set-quota $quota $VEpath/$VEname
 
